@@ -19,7 +19,7 @@ return new class extends Migration
             $table->integer('height');
             $table->boolean('belogsToRange');
             $table->date('firstClimbDate');
-            $table->string('continent');
+            $table->enum('continent',['Afrika', 'Asia', 'Europe', 'America', 'Oceania']);
             $table->timestamps();
         });
     }

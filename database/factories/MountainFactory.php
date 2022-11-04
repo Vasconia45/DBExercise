@@ -17,7 +17,7 @@ class MountainFactory extends Factory
     public function definition()
     {
         return [
-            'name' => ,
+            'name' => $this->faker->name,
             'height' => ,
             'belogsToRange' => ,
             'firstClimbDate' => ,
