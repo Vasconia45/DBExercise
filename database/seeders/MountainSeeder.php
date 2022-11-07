@@ -5,6 +5,7 @@ namespace Database\Seeders;
 use Illuminate\Database\Console\Seeds\WithoutModelEvents;
 use Illuminate\Database\Seeder;
 use Illuminate\Support\Facades\DB;
+use App\Models\Mountain;
 
 class MountainSeeder extends Seeder
 {
@@ -15,7 +16,8 @@ class MountainSeeder extends Seeder
      */
     public function run()
     {
-        DB::table('mountains')->insert([
+        Mountain::factory(10)->create();
+        /*DB::table('mountains')->insert([
             "id" => 1,
             "name" => "Everest",
             "height" =>	8848,
@@ -58,6 +60,6 @@ class MountainSeeder extends Seeder
             "belogsToRange" => true,
             "firstClimbDate" => "2003-08-21",
             "continent" => "Europa",
-        ]);
+        ]);*/
     }
 }
